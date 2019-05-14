@@ -5,14 +5,15 @@ public class Actor {
     private String gender;
     private int age;
 
-    Actor() {
+    Actor()
+    {
 
     }
-
-    Actor(String name, String gender, int age) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
+    Actor(String name, String gender, int age)
+    {
+        this.name=name;
+        this.gender=gender;
+        this.age=age;
     }
 
     public String getName() {
@@ -47,5 +48,4 @@ public class Actor {
                 ", age=" + age +
                 '}';
     }
-
 }
