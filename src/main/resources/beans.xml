@@ -6,33 +6,29 @@
 
     <!-- bean definitions here -->
     <bean id ="actor1" class="com.stackroute.domain.Actor">
-        <property name="name" value="Shah Rukh Khan"/>
-        <property name="gender" value="Male"/>
-        <property name="age" value="50"/>
+        <constructor-arg index="0" name="name" value="Shah Rukh Khan" type="String" />
+        <constructor-arg index="1" name="gender" value="Male" type="String" />
+        <constructor-arg index="2" name="age" value="50" type="int" />
     </bean>
 
-    <bean id="movie1" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor1"/>
+    <bean name="MovieA, MovieB" class="com.stackroute.domain.Movie" scope="prototype" >
+        <constructor-arg index="0" name="actor" ref="actor1" type="Actor" />
     </bean>
 
     <bean id ="actor2" class="com.stackroute.domain.Actor">
-        <property name="name" value="Allu Arjun"/>
-        <property name="gender" value="Male"/>
-        <property name="age" value="40"/>
-    </bean>
-
-    <bean id="movie2" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor2"/>
+        <constructor-arg index="0" name="name" value="Allu Arjun" type="String" />
+        <constructor-arg index="1" name="gender" value="Male" type="String" />
+        <constructor-arg index="2" name="age" value="40" type="int" />
     </bean>
 
     <bean id ="actor3" class="com.stackroute.domain.Actor">
-        <property name="name" value="Salman Khan"/>
-        <property name="gender" value="Male"/>
-        <property name="age" value="60"/>
+        <constructor-arg index="0" name="name" value="Genelia D'souza" type="String" />
+        <constructor-arg index="1" name="gender" value="Female" type="String" />
+        <constructor-arg index="2" name="age" value="35" type="int" />
     </bean>
 
-    <bean id="movie3" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor3"/>
+    <bean id="MovieC" class="com.stackroute.domain.Movie" scope="prototype" >
+        <constructor-arg index="0" name="actor" ref="actor3" type="Actor"/>
     </bean>
 
 </beans>
