@@ -12,6 +12,7 @@
         <constructor-arg index="2" name="age" value="50" type="int" />
     </bean>
 
-    <bean id="beanLifecycleDemoBean" class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
+    <bean id="BeanLifecycleDemoBean" class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
 
+    <bean id="BeanPostProcessorDemoBean" class="com.stackroute.domain.BeanPostProcessorDemoBean" ></bean>
 </beans>
